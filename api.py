@@ -1,14 +1,9 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from flask import Flask
+app = Flask(__name__)
 
-app = FastAPI()
 
-class ScoringItem(BaseModel):
-    base: float
-    exponent: int
-
-@app.post("/")
-async def scoring_endpoint(item: ScoringItem):
+@app.route('/')
+def hello_world():
     return {
-        "result": item.base**item.exponent
+        "message": "hello world"
     }
