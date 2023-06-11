@@ -1,5 +1,5 @@
 import os
-os.environ["PYTHON_VERSION"] = "3.9.11"
+# os.environ["PYTHON_VERSION"] = "3.9.11"
 
 from flask import Flask
 app = Flask(__name__)
